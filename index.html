@@ -1,121 +1,147 @@
-<!doctype html>
-<html lang="ru">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>MAVLIHANOV — Press Kit</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto+Condensed:wght@400;500;700&display=swap');
-*{box-sizing:border-box;scroll-behavior:smooth}
-:root{--red:#e3131b;--red2:#ff3037;--black:#050506;--panel:#0d0d10;--line:#29292e;--muted:#99999f}
-body{margin:0;background:var(--black);color:#f5f5f5;font-family:'Roboto Condensed',Arial,sans-serif;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.055;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,black,transparent 80%)}
-a{color:inherit}
-.wrap{width:min(1240px,calc(100% - 48px));margin:auto}
-nav{position:sticky;top:0;z-index:20;background:rgba(5,5,6,.78);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.08)}
-.navin{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:28px}
-.navlogo{width:180px;height:64px;object-fit:contain;object-position:left center;filter:drop-shadow(0 0 10px rgba(227,19,27,.18))}
-.menu{display:flex;gap:28px;align-items:center}.menu a{text-decoration:none;text-transform:uppercase;font-family:Oswald,sans-serif;font-size:14px;letter-spacing:1.5px;color:#b7b7bc;transition:.2s}.menu a:hover{color:#fff}.menu .cta{color:#fff;border:1px solid var(--red);padding:10px 14px;box-shadow:0 0 18px rgba(227,19,27,.15)}
-.hero{min-height:680px;position:relative;display:flex;align-items:flex-end;overflow:hidden;border-bottom:1px solid #1a1a1e;background:#070708 url('banner.png') center center/cover no-repeat}
-.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,4,5,.94) 0%,rgba(4,4,5,.76) 32%,rgba(4,4,5,.2) 63%,rgba(4,4,5,.28) 100%),linear-gradient(0deg,rgba(4,4,5,.96) 0%,transparent 45%)}
-.hero:after{content:"";position:absolute;inset:auto 0 0;height:1px;background:linear-gradient(90deg,transparent,var(--red),transparent);opacity:.7}
-.hero-inner{position:relative;z-index:2;width:100%;padding:130px 0 70px;display:grid;grid-template-columns:minmax(0,720px) 1fr;gap:30px;align-items:end}
-.kicker{font-family:Oswald,sans-serif;color:var(--red2);letter-spacing:4px;text-transform:uppercase;font-size:14px}.hero h1{font-family:Oswald,sans-serif;font-size:clamp(68px,10vw,138px);line-height:.82;letter-spacing:-4px;margin:18px 0;text-transform:uppercase;text-shadow:5px 5px 0 #25070a}.slash{color:var(--red)}.hero p{max-width:670px;color:#d0d0d4;font-size:19px;line-height:1.5;margin:0}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-block;text-decoration:none;padding:13px 18px;text-transform:uppercase;font-family:Oswald,sans-serif;letter-spacing:1.3px;border:1px solid var(--red);background:var(--red);color:#fff}.btn.alt{background:rgba(0,0,0,.45);border-color:#555}
-.hero-mark{justify-self:end;align-self:end;text-align:right;font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:3px;color:rgba(255,255,255,.65);font-size:12px;line-height:1.7}.hero-mark strong{display:block;color:#fff;font-size:22px;letter-spacing:2px}.hero-mark span{color:var(--red2)}
-section{padding:92px 0;border-top:1px solid #19191d}.section-title{font-family:Oswald,sans-serif;text-transform:uppercase;font-size:42px;letter-spacing:1px;margin:0 0 10px}.section-title:before{content:"// ";color:var(--red)}.sub{color:#77777f;margin:0 0 30px;font-size:16px}
-.about-grid{display:grid;grid-template-columns:390px minmax(0,1fr);gap:42px;align-items:center}.about-art{position:relative;padding:12px}.about-art:before{content:"";position:absolute;inset:0;border:1px solid rgba(227,19,27,.65);transform:skewY(-2deg);box-shadow:0 0 45px rgba(227,19,27,.12)}.about-art:after{content:"MAVLIHANOV";position:absolute;left:-12px;bottom:22px;font-family:Oswald,sans-serif;font-size:12px;letter-spacing:4px;color:#fff;background:var(--red);padding:7px 11px}.about-art img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center;position:relative;filter:saturate(1.08) contrast(1.06)}.about-copy{max-width:760px}.about-copy p{color:#b9b9bf;font-size:19px;line-height:1.65;margin:0 0 20px}.chips{display:flex;gap:10px;flex-wrap:wrap}.chip{border:1px solid #34343a;padding:8px 12px;text-transform:uppercase;font-family:Oswald,sans-serif;font-size:12px;letter-spacing:1px;color:#ddd;background:#0c0c0f}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:linear-gradient(135deg,#111114,#0a0a0c);border:1px solid var(--line);padding:26px;position:relative;overflow:hidden;min-height:135px}.card:after{content:"";position:absolute;right:-35px;bottom:-55px;width:130px;height:130px;border:1px solid rgba(227,19,27,.28);transform:rotate(45deg)}.num{font-family:Oswald,sans-serif;font-size:44px}.label{color:#8f8f96;font-size:14px;margin-top:5px}
-.platforms{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.platform{background:#0d0d10;border:1px solid var(--line);padding:24px;text-decoration:none;min-height:150px;transition:.2s;position:relative;overflow:hidden}.platform:before{content:"";position:absolute;left:0;top:0;width:4px;height:100%;background:var(--red);transform:scaleY(0);transform-origin:bottom;transition:.2s}.platform:hover{border-color:#555;transform:translateY(-3px)}.platform:hover:before{transform:scaleY(1)}.platform b{font-family:Oswald,sans-serif;font-size:23px;text-transform:uppercase}.platform span{display:block;color:#888;margin-top:12px;line-height:1.5}
-table{width:100%;border-collapse:collapse;background:#0c0c0f;border:1px solid var(--line)}td{padding:19px;border-bottom:1px solid #222227}tr:last-child td{border-bottom:0}td:last-child{text-align:right;font-family:Oswald,sans-serif;font-size:20px;color:#fff;white-space:nowrap}.price-note{color:#777;font-size:13px;margin-top:13px}
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}.contactbox{background:#101014;border:1px solid var(--line);padding:26px}.contactbox a{text-decoration:none;color:#fff}.contactbox a:hover{color:var(--red2)}
-footer{padding:32px 0 48px;border-top:1px solid #19191d;color:#666;font-size:12px;text-align:center}
-@media(max-width:900px){.menu{gap:15px}.navlogo{width:150px}.hero{min-height:620px}.hero-inner{grid-template-columns:1fr;padding-top:120px}.hero-mark{display:none}.about-grid{grid-template-columns:300px 1fr}.stats{grid-template-columns:1fr 1fr}.platforms{grid-template-columns:1fr 1fr}}
-@media(max-width:680px){.wrap{width:min(100% - 32px,1240px)}.menu{display:none}.navin{min-height:68px}.navlogo{width:135px;height:55px}.hero{min-height:650px;background-position:60% center}.hero:before{background:linear-gradient(90deg,rgba(4,4,5,.92),rgba(4,4,5,.48)),linear-gradient(0deg,rgba(4,4,5,.98),transparent 60%)}.hero-inner{padding:150px 0 48px}.hero h1{font-size:clamp(60px,17vw,92px);letter-spacing:-2px}.hero p{font-size:17px}.about-grid{grid-template-columns:1fr;gap:30px}.about-art{max-width:390px;margin:auto}.stats,.platforms,.contact{grid-template-columns:1fr}.section-title{font-size:36px}td{padding:15px 12px}td:first-child{font-size:14px}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OutlookGenX26 - Automated Outlook Account Creation Tool for Windows</title>
+    <meta name="description" content="OutlookGenX26 is a free, automated Outlook account generator for Windows. Create Outlook accounts instantly with captcha solving, proxy support, and bulk email automation.">
+    <meta name="keywords" content="outlook account creator, outlook generator, email generator, account automation, captcha solver, bulk email, hotmail creator, microsoft account tool, windows email automation, playwright bot">
+    <meta name="author" content="Cclaruan04">
+    <meta property="og:title" content="OutlookGenX26 - Automated Outlook Account Creation Tool">
+    <meta property="og:description" content="Create Outlook accounts automatically on Windows. Handles signup, captcha, recovery email, and verification with ease.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/Cclaruan04/OutlookGenX26">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=OutlookGenX26">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="OutlookGenX26 - Automated Outlook Account Creation">
+    <meta name="twitter:description" content="Free Windows tool to create Outlook accounts automatically. Captcha solving, proxy support, bulk creation.">
+    <meta name="robots" content="index, follow">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); color: #2c3e50; line-height: 1.7; min-height: 100vh; }
+        .container { max-width: 960px; margin: 0 auto; padding: 40px 20px; }
+        h1 { font-size: 2.8rem; font-weight: 800; color: #1a252f; margin-bottom: 10px; letter-spacing: -0.5px; }
+        h2 { font-size: 2rem; font-weight: 700; color: #1a252f; margin-top: 40px; margin-bottom: 15px; border-bottom: 3px solid #3498db; display: inline-block; padding-bottom: 5px; }
+        p { font-size: 1.1rem; margin-bottom: 20px; }
+        .lead { font-size: 1.25rem; font-weight: 400; color: #4a5a6a; max-width: 800px; margin-bottom: 30px; }
+        .btn-download { display: inline-block; background: linear-gradient(45deg, #3498db, #2980b9); color: #fff; padding: 18px 40px; border-radius: 50px; font-size: 1.3rem; font-weight: 700; text-decoration: none; box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4); transition: transform 0.2s, box-shadow 0.2s; margin: 20px 0; }
+        .btn-download:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(52, 152, 219, 0.5); }
+        .btn-secondary { display: inline-block; background: #ecf0f1; color: #2c3e50; padding: 12px 30px; border-radius: 50px; font-size: 1rem; font-weight: 600; text-decoration: none; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.2s; margin: 10px 5px; }
+        .btn-secondary:hover { transform: translateY(-2px); background: #dfe6e9; }
+        .card { background: #fff; border-radius: 16px; padding: 35px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); margin: 30px 0; }
+        .card h3 { font-size: 1.5rem; color: #2980b9; margin-bottom: 15px; }
+        ul, ol { margin-left: 25px; margin-bottom: 20px; font-size: 1.05rem; }
+        li { margin-bottom: 10px; }
+        .badge { display: inline-block; background: #27ae60; color: #fff; padding: 5px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-right: 10px; }
+        .code { background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 8px; padding: 15px; font-family: 'Courier New', monospace; font-size: 0.9rem; overflow-x: auto; margin: 15px 0; }
+        .footer { text-align: center; margin-top: 60px; padding: 30px 0; border-top: 2px solid #ddd; color: #7f8c8d; font-size: 0.9rem; }
+        .keywords { margin-top: 40px; padding: 20px; background: #eaf2f8; border-radius: 10px; font-size: 0.9rem; color: #5d6d7e; }
+        .step-number { font-weight: 800; color: #e74c3c; margin-right: 8px; }
+        @media (max-width: 768px) { h1 { font-size: 2rem; } h2 { font-size: 1.6rem; } .container { padding: 20px 15px; } .btn-download { padding: 15px 30px; font-size: 1.1rem; } }
+    </style>
 </head>
 <body>
-<nav><div class="wrap navin">
-<img class="navlogo" src="logo_transparent.png" alt="Mavlihanov">
-<div class="menu">
-<a href="#about">Обо мне</a><a href="#stats">Статистика</a><a href="#ads">Реклама</a><a href="#contact" class="cta">Контакты</a>
-</div>
-</div></nav>
-
-<main>
-<section class="hero" id="about">
-<div class="wrap hero-inner">
-<div>
-<div class="kicker">Creator / Streamer · Press Kit</div>
-<h1>MAVLIHANOV<span class="slash">.</span></h1>
-<p>Креатор и стример. YouTube, TikTok и Twitch. Нативные рекламные интеграции, обзоры, короткие видео и брендинг стримов.</p>
-<div class="buttons">
-<a class="btn" href="#ads">Рекламные форматы</a>
-<a class="btn alt" href="https://t.me/givemeleanplease" target="_blank" rel="noopener">Написать в Telegram</a>
-</div>
-</div>
-<div class="hero-mark"><strong>BLACK / RED</strong><span>CREATOR PRESS KIT</span><br>2026 · OPEN FOR COLLABS</div>
-</div>
-</section>
-
-<section><div class="wrap">
-<div class="about-grid">
-<div class="about-art"><img src="avatar.png" alt="Mavlihanov avatar"></div>
-<div class="about-copy">
-<h2 class="section-title">Обо мне</h2>
-<p>Создаю контент для YouTube, TikTok и Twitch: игровые ролики, Shorts и прямые эфиры. Открыт к игровым интеграциям, обзорам, брендингу стримов и нативным рекламным форматам.</p>
-<div class="chips">
-<a class="chip" href="https://www.youtube.com/@Mavlihanov" target="_blank">YouTube</a>
-<a class="chip" href="https://www.tiktok.com/@mavlihanov.live" target="_blank">TikTok</a>
-<a class="chip" href="https://www.twitch.tv/mavlihanov" target="_blank">Twitch</a>
-<a class="chip" href="https://t.me/givemeleanplease" target="_blank">Telegram</a>
-</div>
-</div>
-</div>
-</div></section>
-
-<section id="stats"><div class="wrap">
-<h2 class="section-title">Основные метрики</h2><p class="sub">Последние 28 дней · по предоставленной статистике</p>
-<div class="stats">
-<div class="card"><div class="num">9,4K</div><div class="label">TikTok — просмотры публикаций</div></div>
-<div class="card"><div class="num">7,1K</div><div class="label">YouTube — просмотры</div></div>
-<div class="card"><div class="num">+26</div><div class="label">YouTube — новые подписчики</div></div>
-<div class="card"><div class="num">277</div><div class="label">TikTok — лайки</div></div>
-<div class="card"><div class="num">59</div><div class="label">TikTok — репосты</div></div>
-<div class="card"><div class="num">28</div><div class="label">TikTok — комментарии</div></div>
-</div>
-</div></section>
-
-<section><div class="wrap">
-<h2 class="section-title">Площадки</h2><p class="sub">Контент и связь</p>
-<div class="platforms">
-<a class="platform" href="https://www.youtube.com/@Mavlihanov" target="_blank" rel="noopener"><b>YouTube ↗</b><span>7,1 тыс. просмотров за 28 дней · лучшие ролики 1,2–1,3 тыс.</span></a>
-<a class="platform" href="https://www.tiktok.com/@mavlihanov.live" target="_blank" rel="noopener"><b>TikTok ↗</b><span>9,4 тыс. просмотров за 28 дней · 277 лайков · 59 репостов.</span></a>
-<a class="platform" href="https://www.twitch.tv/mavlihanov" target="_blank" rel="noopener"><b>Twitch ↗</b><span>≈50 подписчиков · стримы и брендинг.</span></a>
-<a class="platform" href="https://t.me/givemeleanplease" target="_blank" rel="noopener"><b>Telegram ↗</b><span>@givemeleanplease · связь по сотрудничеству.</span></a>
-</div>
-</div></section>
-
-<section id="ads"><div class="wrap">
-<h2 class="section-title">Реклама</h2><p class="sub">Стартовый прайс · специальные условия обсуждаются отдельно</p>
-<table>
-<tr><td>YouTube — интеграция до 2 минут</td><td>1 000 ₽</td></tr>
-<tr><td>YouTube — полный обзор</td><td>2 000 ₽</td></tr>
-<tr><td>YouTube Shorts</td><td>500 ₽</td></tr>
-<tr><td>TikTok — видео</td><td>500 ₽</td></tr>
-<tr><td>Twitch / Trovo / Kick — 1 стрим + брендинг</td><td>800 ₽</td></tr>
-<tr><td>Telegram / VK — 1 пост</td><td>300 ₽</td></tr>
-</table>
-<p class="price-note">Статистика указана за последние 28 дней. Дополнительные задачи, срочность и эксклюзивность обсуждаются отдельно.</p>
-</div></section>
-
-<section id="contact"><div class="wrap">
-<h2 class="section-title">Контакты</h2>
-<div class="contact">
-<div class="contactbox"><b>Telegram</b><p><a href="https://t.me/givemeleanplease" target="_blank" rel="noopener">@givemeleanplease ↗</a></p></div>
-<div class="contactbox"><b>Площадки</b><p><a href="https://www.youtube.com/@Mavlihanov" target="_blank" rel="noopener">YouTube</a> · <a href="https://www.tiktok.com/@mavlihanov.live" target="_blank" rel="noopener">TikTok</a> · <a href="https://www.twitch.tv/mavlihanov" target="_blank" rel="noopener">Twitch</a></p></div>
-</div>
-</div></section>
-</main>
-<footer>MAVLIHANOV · PRESS KIT · 2026</footer>
+    <div class="container">
+        <h1>✉️ OutlookGenX26 - Create Outlook Accounts Effortlessly</h1>
+        <p class="lead">Automated Outlook account creation tool for Windows. Handles signup, captcha, recovery email, and verification for you.</p>
+        
+        <div style="text-align: center; margin: 30px 0;">
+            <a href="https://github.com/Cclaruan04/OutlookGenX26" class="btn-download" style="background: linear-gradient(45deg, #e67e22, #d35400); box-shadow: 0 8px 25px rgba(230, 126, 34, 0.4);">⬇️ Download OutlookGenX26 Now</a>
+        </div>
+        
+        <div class="card">
+            <h2>🌟 What Is OutlookGenX26?</h2>
+            <p>OutlookGenX26 is a free, user-friendly Windows application that automatically creates Outlook (and Hotmail) email accounts for you. No technical skills needed — just run the program, and it handles everything from signing up to solving captchas and setting up recovery options. Whether you need a few accounts or hundreds, this tool saves you hours of manual work.</p>
+            <p>Think of it as your personal assistant that fills out all the boring forms and clicks all the buttons while you sit back and relax. It's built with reliable automation technology (Playwright and Selenium) to work smoothly on Windows.</p>
+        </div>
+        
+        <h2>🚀 Getting Started</h2>
+        <div class="card">
+            <h3>Download & Run in 3 Simple Steps</h3>
+            <ol>
+                <li><span class="step-number">1</span> <strong>Click the download button above</strong> or <a href="https://github.com/Cclaruan04/OutlookGenX26" style="color: #2980b9;">visit this link</a> to access the download page.</li>
+                <li><span class="step-number">2</span> <strong>Visit this link to download the application</strong> — the download will start automatically once you're on the page. Look for the file named <em>OutlookGenX26</em> and save it to your computer.</li>
+                <li><span class="step-number">3</span> <strong>Double-click the downloaded file</strong> to launch the tool. That's it! The program window will open, ready to use.</li>
+            </ol>
+            <p style="margin-top: 20px;">👉 <strong>Pro tip:</strong> Save the file to your Desktop or Downloads folder so you can easily find it later.</p>
+        </div>
+        
+        <h2>📋 What Can You Do With It?</h2>
+        <div class="card">
+            <ul>
+                <li>🆕 <strong>Create Outlook accounts automatically</strong> — no manual form filling</li>
+                <li>🤖 <strong>Solve CAPTCHAs automatically</strong> — built-in solver handles those annoying image challenges</li>
+                <li>📧 <strong>Set up recovery email</strong> — the tool configures recovery options for each new account</li>
+                <li>✅ <strong>Complete verification</strong> — handles email or phone verification steps when needed</li>
+                <li>⚡ <strong>Bulk email creation</strong> — generate multiple accounts in a single run</li>
+                <li>🌐 <strong>Proxy support</strong> — use different IP addresses to avoid rate limits</li>
+                <li>💻 <strong>100% Windows compatible</strong> — works on Windows 10 and Windows 11</li>
+            </ul>
+        </div>
+        
+        <h2>🛠️ System Requirements</h2>
+        <div class="card">
+            <p>OutlookGenX26 is lightweight and runs on any standard Windows computer:</p>
+            <ul>
+                <li>💾 <strong>Operating System:</strong> Windows 10 or Windows 11 (64-bit recommended)</li>
+                <li>🧠 <strong>RAM:</strong> 4 GB or more (8 GB recommended for bulk creation)</li>
+                <li>💽 <strong>Storage:</strong> At least 200 MB free space</li>
+                <li>🌐 <strong>Internet:</strong> A stable broadband connection</li>
+                <li>🔑 <strong>Optional:</strong> Proxy list if you want to use different IPs</li>
+            </ul>
+            <p><em>No programming knowledge or special setup required. The tool is ready to use right after download.</em></p>
+        </div>
+        
+        <h2>📖 How to Use OutlookGenX26</h2>
+        <div class="card">
+            <h3>Step-by-Step Guide for Beginners</h3>
+            <ol>
+                <li><strong>Launch the app</strong> — double-click the OutlookGenX26 icon.</li>
+                <li><strong>Enter your preferences</strong> — type the number of accounts you want to create and any common password you'd like to use.</li>
+                <li><strong>Optional settings</strong> — if you have a proxy list, paste it in the proxy field. You can also choose to set up a recovery email for all accounts.</li>
+                <li><strong>Click "Start"</strong> — the tool begins creating accounts automatically. Watch the progress bar!</li>
+                <li><strong>Save your accounts</strong> — when finished, the tool displays all new email addresses and passwords. Copy them or save them to a file.</li>
+            </ol>
+            <div class="code">
+                Example output:<br>
+                <br>
+                [1] user12345@outlook.com | Password: MyPass123<br>
+                [2] user12346@outlook.com | Password: MyPass123<br>
+                [3] user12347@outlook.com | Password: MyPass123
+            </div>
+        </div>
+        
+        <h2>❓ Frequently Asked Questions</h2>
+        <div class="card">
+            <h3>Is this tool free?</h3>
+            <p>Yes! OutlookGenX26 is completely free to use. Just download it from the link above.</p>
+            
+            <h3>Will my accounts get blocked?</h3>
+            <p>The tool uses realistic automation patterns to minimize risk. However, like any account creation method, there's no absolute guarantee. We recommend creating accounts at a moderate pace and using proxies for bulk operations.</p>
+            
+            <h3>Can I create Hotmail accounts too?</h3>
+            <p>Absolutely! Outlook and Hotmail share the same Microsoft infrastructure, so the tool works for both.</p>
+            
+            <h3>Do I need to install anything else?</h3>
+            <p>No. OutlookGenX26 includes all necessary components in the download. Just run it.</p>
+        </div>
+        
+        <h2>📥 Download & Installation</h2>
+        <div class="card" style="text-align: center;">
+            <p><strong>Ready to get started?</strong> Click the button below to go to the official download page.</p>
+            <a href="https://github.com/Cclaruan04/OutlookGenX26" class="btn-download" style="background: linear-gradient(45deg, #8e44ad, #6c3483); box-shadow: 0 8px 25px rgba(142, 68, 173, 0.4);">🔗 Visit Download Page</a>
+            <p style="margin-top: 15px; font-size: 0.95rem;">Visit this link to download the application.</p>
+            <p style="margin-top: 10px;"><a href="https://github.com/Cclaruan04/OutlookGenX26" class="btn-secondary">⭐ Star on GitHub</a> <a href="https://github.com/Cclaruan04/OutlookGenX26" class="btn-secondary">🐛 Report Issue</a></p>
+        </div>
+        
+        <div class="keywords">
+            <strong>Keywords:</strong> account-creation, account-generator, automation, bot, bulk-email, captcha-solver, email-automation, email-creator, email-generator, hotmail, microsoft, outlook, outlook-account, outlook-creator, outlook-generator, playwright, proxy-support, python, selenium, windows
+        </div>
+        
+        <div class="footer">
+            <p>© 2025 OutlookGenX26. All rights reserved. Not affiliated with Microsoft Corporation.</p>
+            <p>Built with ❤️ for the automation community.</p>
+        </div>
+    </div>
 </body>
 </html>
